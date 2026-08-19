@@ -69,3 +69,27 @@ Defeito e problema de qualidade não são necessariamente a mesma coisa. Um prob
 No caso A8, o defeito está no requisito, pois a regra especificada não corresponde à exigência legal. O código pode estar funcionando corretamente em relação ao requisito fornecido.
 
 Isso demonstra que testes não garantem, sozinhos, que os requisitos estejam corretos. Um teste pode verificar se o sistema implementa uma regra, mas, se a própria regra estiver errada, os testes podem passar e o produto continuar inadequado.
+
+## B1
+
+Considerando o requisito “O sistema deve calcular a multa por atraso na devolução”:
+
+### Crosby — conformidade com requisitos
+
+Crosby permite avaliar se o sistema está em conformidade com aquilo que foi especificado. Neste caso, o sistema deveria realizar o cálculo da multa conforme o requisito. Porém, o requisito é insuficiente, pois não define a fórmula, o valor por dia de atraso, limites ou regras para diferentes situações. Assim, não existe uma especificação suficientemente precisa para determinar a conformidade.
+
+### Juran — adequação ao uso
+
+Juran direciona a análise para a adequação do produto ao uso. O sistema precisa calcular uma multa que seja adequada às necessidades da biblioteca e de seus usuários. O requisito, entretanto, não informa quais necessidades devem ser atendidas nem qual política de cobrança deve ser aplicada. Portanto, não é possível saber apenas pela frase se o resultado será realmente adequado ao uso.
+
+### Ausência de deficiências
+
+Essa definição permite procurar comportamentos incorretos ou defeitos no sistema, como calcular uma multa errada, cobrar quando não existe atraso ou deixar de cobrar quando deveria. Entretanto, o requisito não informa qual é o comportamento correto. Sem uma regra de cálculo definida, fica difícil determinar objetivamente se existe uma deficiência.
+
+### Weinberg — qualidade percebida no contexto
+
+A abordagem de Weinberg chama atenção para o fato de que qualidade depende do contexto e das pessoas interessadas. Para um bibliotecário, a multa pode precisar ser correta e fácil de conferir; para o usuário, pode precisar ser justa e previsível; para a instituição, pode precisar seguir sua política. O requisito não identifica essas expectativas nem os diferentes interessados, deixando escapar aspectos contextuais da qualidade.
+
+### Conclusão
+
+As quatro perspectivas mostram problemas diferentes no requisito. Ele é curto demais para definir de forma verificável o que significa calcular corretamente a multa. É necessário detalhar a regra de negócio, os valores, as condições e os resultados esperados.
