@@ -93,3 +93,55 @@ A abordagem de Weinberg chama atenção para o fato de que qualidade depende do 
 ### Conclusão
 
 As quatro perspectivas mostram problemas diferentes no requisito. Ele é curto demais para definir de forma verificável o que significa calcular corretamente a multa. É necessário detalhar a regra de negócio, os valores, as condições e os resultados esperados.
+
+## B2
+
+Uma versão verificável do requisito seria:
+
+> **Para cada devolução, o sistema deve calcular a multa como R$ 2,00 por dia completo de atraso. Para devoluções realizadas no prazo ou antecipadamente, a multa deve ser R$ 0,00. O valor da multa deve ser expresso em reais com duas casas decimais.**
+
+Essa versão permite criar casos de teste sem fazer perguntas adicionais.
+
+### Necessidades implícitas que foram tornadas explícitas
+
+1. É necessário definir o que caracteriza atraso.
+2. É necessário definir o valor da multa por dia de atraso.
+3. É necessário definir o comportamento quando não existe atraso.
+4. É necessário definir a unidade utilizada para o atraso: dias completos.
+5. É necessário definir o formato do resultado monetário, com duas casas decimais.
+
+Exemplos de casos verificáveis:
+
+| Dias de atraso | Resultado esperado |
+|---:|---:|
+| -1 | R$ 0,00 |
+| 0 | R$ 0,00 |
+| 1 | R$ 2,00 |
+| 2 | R$ 4,00 |
+| 5 | R$ 10,00 |
+
+## B3
+
+### 1. Usuário da biblioteca
+
+Consideraria qualidade uma multa justa, transparente e calculada exatamente de acordo com as regras informadas.
+
+### 2. Bibliotecário
+
+Consideraria qualidade um cálculo automático e correto, que reduza erros manuais e facilite o atendimento aos usuários.
+
+### 3. Direção da biblioteca
+
+Consideraria qualidade uma regra de multa alinhada às políticas da instituição, permitindo controle e aplicação uniforme das cobranças.
+
+### 4. Setor financeiro
+
+Consideraria qualidade um cálculo preciso, consistente e corretamente registrado para fins de controle financeiro.
+
+### 5. Equipe de desenvolvimento
+
+Consideraria qualidade uma regra clara, determinística e suficientemente especificada para ser implementada, testada e mantida.
+
+### Conflito entre partes interessadas
+
+Pode existir conflito entre a direção e os usuários. A direção pode considerar adequado utilizar uma multa mais alta para incentivar a devolução no prazo, enquanto os usuários podem considerar essa mesma multa excessiva e injusta. Portanto, uma regra de qualidade precisa considerar os diferentes interesses envolvidos.
